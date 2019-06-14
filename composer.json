@@ -1,0 +1,45 @@
+{
+  "name": "utakka/redactor-anchors",
+  "description": "Support for anchors in Craft 3 Redactor",
+  "type": "craft-plugin",
+  "keywords": [
+    "craft",
+    "craftcms",
+    "craft-plugin",
+    "redactoranchors",
+    "anchor"
+  ],
+  "support": {
+    "docs": "https://github.com/utakka/craft-redactor-anchors/blob/master/README.md",
+    "issues": "https://github.com/utakka/craft-redactor-anchors/issues"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Lars Heidkämper",
+      "homepage": "https://github.com/utakka"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^3.1.30",
+    "craftcms/redactor": "^2.3.3.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "utakka\\redactoranchors\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Redactor Anchors",
+    "handle": "redactor-anchors",
+    "developer": "Lars Heidkämper",
+    "developerUrl": "https://github.com/utakka",
+    "schemaVersion": "2.0",
+    "description": "Support for anchors in Craft 3 Redactor",
+    "hasCpSettings": false,
+    "hasCpSection": false,
+    "documentationUrl": "https://github.com/utakka/craft-redactor-anchors/blob/master/README.md",
+    "changelogUrl": "https://github.com/svenjungnickel/craft-redactor-anchors/blob/master/CHANGELOG.md",
+    "class": "utakka\\redactoranchors\\RedactorAnchors"
+  }
+}
