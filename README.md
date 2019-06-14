@@ -1,4 +1,4 @@
-# Anchors für Redactor in Craft 3
+# Anchors for Redactor in Craft 3
 
 Add anchor functionality for Reactor in Craft CMS
 
