@@ -1,6 +1,6 @@
 (function($R) {
   
-  $R.add('plugin', 'reactoranchors', {
+  $R.add('plugin', 'redactoranchors', {
 
 
     translations: {
