@@ -24,6 +24,12 @@
     "craftcms/cms": "^3.1.30",
     "craftcms/redactor": "^2.3.3.2"
   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "utakka\\redactoranchors\\": "src/"
