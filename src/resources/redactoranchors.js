@@ -35,11 +35,11 @@
     start: function() {
         var data = {
             title: this.lang.get('anchor-add'),
-            api: 'plugin.reactoranchors.open',
-            observe: 'reactoranchors'
+            api: 'plugin.redactoranchors.open',
+            observe: 'redactoranchors'
         };
 
-        var $button = this.toolbar.addButton('reactoranchors', data);
+        var $button = this.toolbar.addButton('redactoranchors', data);
         $button.setIcon('<i class="re-icon-redactoranchors"></i>');
 
     },
@@ -47,7 +47,7 @@
 
     open: function()
 		{
-
+alert("open");
 		},
 
 
