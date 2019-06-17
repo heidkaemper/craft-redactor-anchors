@@ -36,9 +36,7 @@
       this.lang = app.lang;
       this.$body = app.$body;
       this.toolbar = app.toolbar;
-      this.inspector = app.inspector;
       this.selection = app.selection;
-      this.editor = app.editor;
 
       this.opts.stylesClass += " redactoranchorsWrapper";
 
@@ -86,41 +84,38 @@
     // handle modal
     onmodal: {
       redactoranchorsModal: {
+
         open: function($modal, $form) {
           if(this.$block) {
-            var blockData = this._getData(this.$block);
-            $form.setData(blockData);
+            var blockData = $R.dom(this.$block);
+            $form.setData({ id: blockData.attr('id') });
           }
         },
+
         opened: function($modal, $form) {
-          $form.getField('anchorname').focus();
+          $form.getField('id').focus();
         },
+
         save: function($modal, $form) {
+
           var data = $form.getData();
-          this._save(data);
+          
+          if(data.id === '') {
+            this.$block.removeAttr('id');
+          } else {
+            if( data.id.match(/^[a-zA-Z][a-zA-Z0-9-_\.]*$/gi) ) {
+              this.$block.attr('id', data.id);
+            } else {
+              $form.setError('id');
+              return false;
+            }
+          }
+
+          this.app.api('module.modal.close');
         }
+
       }
     },
-
-
-    // save userinput
-		_save: function(data) {
-      this.app.api('module.modal.close');
-      if(data.id === '') {
-        this.$block.removeAttr('id');
-      } else {
-        this.$block.attr('id', data.id);
-      }
-    },
-    
-
-    // get id (anchor)
-    _getData: function(block) {
-      var $block = $R.dom(block);
-      return {
-        id: $block.attr('id')
-      };
-		},
 
 
 
