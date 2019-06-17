@@ -1,18 +1,32 @@
 (function($R) {
-  
+
   $R.add('plugin', 'redactoranchors', {
 
 
     translations: {
       en: {
         "anchor": "Anchor",
-        "anchor-add": "Add anchor"
+        "anchor-add": "Add anchor",
+        "anchor-name": "Name"
       },
       de: {
         "anchor": "Sprungmarke",
-        "anchor-add": "Sprungmarke setzen"
+        "anchor-add": "Sprungmarke setzen",
+        "anchor-name": "Name"
       }
     },
+
+
+    modals: {
+      'redactoranchorsModal':
+        '<form action=""> \
+          <div class="form-item"> \
+            <label for="modal-redactoranchors-name">## anchor-name ##</label> \
+            <input type="text" id="modal-redactoranchors-name" name="id"> \
+          </div> \
+        </form>'
+    },
+
 
 
     init: function(app) {
@@ -24,6 +38,9 @@
       this.toolbar = app.toolbar;
       this.inspector = app.inspector;
       this.selection = app.selection;
+      this.editor = app.editor;
+
+      this.opts.stylesClass += " redactoranchorsWrapper";
 
       if( this._extendLinkModal() ) {
         this._extendLinkFunctions();
@@ -32,23 +49,80 @@
     },
 
 
+    // add button
     start: function() {
-        var data = {
-            title: this.lang.get('anchor-add'),
-            api: 'plugin.redactoranchors.open',
-            observe: 'redactoranchors'
-        };
-
-        var $button = this.toolbar.addButton('redactoranchors', data);
-        $button.setIcon('<i class="re-icon-redactoranchors"></i>');
-
+      var data = {
+        title: this.lang.get('anchor-add'),
+        api: 'plugin.redactoranchors.open'
+      };
+      var $button = this.toolbar.addButton('redactoranchors', data);
+      $button.setIcon('<i class="re-icon-redactoranchors"></i>');
     },
 
 
-    open: function()
-		{
-alert("open");
+    // add modal
+    open: function() {
+
+      var block = this.selection.getBlock();
+      if (!block) return;
+
+      this.$block = $R.dom(block);
+
+      var options = {
+        title: this.lang.get('anchor'),
+        width: '440px',
+        name: 'redactoranchorsModal',
+        commands: {
+          save: { title: this.lang.get('save') },
+          cancel: { title: this.lang.get('cancel') }
+        }
+      };
+
+      this.app.api('module.modal.build', options);
+
+    },
+    
+
+    // handle modal
+    onmodal: {
+      redactoranchorsModal: {
+        open: function($modal, $form) {
+          if(this.$block) {
+            var blockData = this._getData(this.$block);
+            $form.setData(blockData);
+          }
+        },
+        opened: function($modal, $form) {
+          $form.getField('anchorname').focus();
+        },
+        save: function($modal, $form) {
+          var data = $form.getData();
+          this._save(data);
+        }
+      }
+    },
+
+
+    // save userinput
+		_save: function(data) {
+      this.app.api('module.modal.close');
+      if(data.id === '') {
+        this.$block.removeAttr('id');
+      } else {
+        this.$block.attr('id', data.id);
+      }
+    },
+    
+
+    // get id (anchor)
+    _getData: function(block) {
+      var $block = $R.dom(block);
+      return {
+        id: $block.attr('id')
+      };
 		},
+
+
 
 
     // extend the link plugin modal
@@ -65,6 +139,7 @@ alert("open");
         return $R.modals.link.search('id="modal-link-anchor"') >= 0 ? true : false;
 
       }
+      return false;
     },
 
 
@@ -133,6 +208,7 @@ alert("open");
 
       }
     }
+
 
 
   });

@@ -12,3 +12,55 @@ body .re-icon-redactoranchors {
 .re-icon-redactoranchors:before {
   content: "\e909";
 }
+
+.redactoranchorsWrapper [id]:not([id=""])::before {
+  content: "\e909";
+  font-family: 'redactoranchorsfont' !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-variant: normal;
+  font-size: 11px !important;
+  text-transform: none !important;
+  padding: 0 4px 0 2px !important;
+  margin: 0;
+  opacity: .5;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.redactoranchorsWrapper [id]:not([id=""]):hover::before {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.redactoranchorsWrapper [id]:not([id=""]):hover {
+  position: relative;
+}
+
+.redactoranchorsWrapper [id]:not([id=""])::after {
+  content: "";
+  opacity: 0;
+}
+
+.redactoranchorsWrapper [id]:not([id=""]):hover::after {
+  content: attr(id);
+  position: absolute;
+  top: 3px;
+  left: 0;
+  font-family: monospace;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 1;
+  padding: 3px 5px;
+  border-radius: 3px;
+  color: #fff;
+  background: rgba(0,0,0,.8);
+  max-width: 150px;
+  overflow: hidden;
+  transform: translateY(-100%);
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
