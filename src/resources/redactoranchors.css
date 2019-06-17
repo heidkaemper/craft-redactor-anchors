@@ -13,7 +13,7 @@ body .re-icon-redactoranchors {
   content: "\e909";
 }
 
-.redactoranchorsWrapper [id]:not([id=""])::before {
+.redactoranchorsWrapper [id]:not([id=""]):not([id="selection-marker-start"]):not([id="selection-marker-end"])::before {
   content: "\e909";
   font-family: 'redactoranchorsfont' !important;
   font-weight: normal !important;
@@ -29,21 +29,21 @@ body .re-icon-redactoranchors {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.redactoranchorsWrapper [id]:not([id=""]):hover::before {
+.redactoranchorsWrapper [id]:not([id=""]):not([id="selection-marker-start"]):not([id="selection-marker-end"]):hover::before {
   opacity: 1;
   transition: opacity 300ms;
 }
 
-.redactoranchorsWrapper [id]:not([id=""]):hover {
+.redactoranchorsWrapper [id]:not([id=""]):not([id="selection-marker-start"]):not([id="selection-marker-end"]):hover {
   position: relative;
 }
 
-.redactoranchorsWrapper [id]:not([id=""])::after {
+.redactoranchorsWrapper [id]:not([id=""]):not([id="selection-marker-start"]):not([id="selection-marker-end"])::after {
   content: "";
   opacity: 0;
 }
 
-.redactoranchorsWrapper [id]:not([id=""]):hover::after {
+.redactoranchorsWrapper [id]:not([id=""]):not([id="selection-marker-start"]):not([id="selection-marker-end"]):hover::after {
   content: attr(id);
   position: absolute;
   top: 3px;

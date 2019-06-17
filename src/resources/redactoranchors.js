@@ -122,7 +122,7 @@
 
     // extend the link plugin modal
     _extendLinkModal: function(){
-      if( $R.modals.link ) {
+      if( $R.modals.link && $R.modals.link.search('id="modal-link-anchor"') <= 0 ) {
 
         $R.modals.link = $R.modals.link.replace('</form>', '\
             <div class="form-item"> \
