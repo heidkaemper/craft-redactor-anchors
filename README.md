@@ -17,8 +17,3 @@ composer require utakka/redactor-anchors
 
 3. Add `redactoranchors` to plugins array in your Redactor config file
 (located in config/redactor/, see [redactor-config-sample.json](./redactor-config-sample.json))
-
-
-## Changelog
-
-2019-06-17: Initial release
