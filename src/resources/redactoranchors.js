@@ -13,7 +13,12 @@
         "anchor": "Sprungmarke",
         "anchor-add": "Sprungmarke setzen",
         "anchor-name": "Name"
-      }
+      },
+      fr: {
+        "anchor": "Ancre",
+        "anchor-add": "Ajouter une ancre",
+        "anchor-name": "Nom"
+      },
     },
 
 
