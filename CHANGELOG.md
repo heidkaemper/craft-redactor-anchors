@@ -1,4 +1,4 @@
-# Changelog
+# Changelog for Redactor Anchors
 
 ## 1.0.2 - 2019-06-18
 
