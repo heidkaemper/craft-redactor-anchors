@@ -45,7 +45,7 @@
     "hasCpSettings": false,
     "hasCpSection": false,
     "documentationUrl": "https://github.com/utakka/craft-redactor-anchors/blob/master/README.md",
-    "changelogUrl": "https://github.com/svenjungnickel/craft-redactor-anchors/blob/master/CHANGELOG.md",
+    "changelogUrl": "https://github.com/Utakka/craft-redactor-anchors/blob/master/CHANGELOG.md",
     "class": "utakka\\redactoranchors\\RedactorAnchors"
   }
 }
