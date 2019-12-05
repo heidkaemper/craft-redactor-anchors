@@ -1,5 +1,11 @@
 # Changelog for Redactor Anchors
 
+## 1.1.0 - 2019-12-05
+
+### Added
+- Anchor name from selected text
+- Spanish Translation
+
 ## 1.0.2 - 2019-06-18
 
 ### Added 
