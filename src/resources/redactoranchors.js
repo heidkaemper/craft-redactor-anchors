@@ -19,6 +19,11 @@
         "anchor-add": "Ajouter une ancre",
         "anchor-name": "Nom"
       },
+      es: {
+        "anchor": "Ancla",
+        "anchor-add": "Agregar ancla",
+        "anchor-name": "Nombre"
+      },
     },
 
 
@@ -93,7 +98,7 @@
         open: function($modal, $form) {
           if(this.$block) {
             var blockData = $R.dom(this.$block);
-            $form.setData({ id: blockData.attr('id') });
+            $form.setData({ id: blockData.attr('id') ? blockData.attr('id') : this._textToId(blockData.text()) });
           }
         },
 
@@ -123,6 +128,10 @@
     },
 
 
+    // create anchor name from text
+    _textToId: function(str) {
+      return str.substring(0, 50).trim().toLowerCase().replace(/\ /g, '-').replace(/[^a-z0-9-_\.]/g, '');
+    },
 
 
     // extend the link plugin modal
