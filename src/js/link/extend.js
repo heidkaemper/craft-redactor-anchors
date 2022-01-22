@@ -1,4 +1,4 @@
-export default function extendLinkPlugin($R) {
+export default function extendLinkPlugin() {
     if (! $R.modals.link || ! $R.modules.link) {
         return;
     }
