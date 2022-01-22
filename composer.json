@@ -32,7 +32,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "heidkaemper\\redactoranchors\\": "src/"
+      "heidkaemper\\redactoranchors\\": "dist/"
     }
   },
   "extra": {

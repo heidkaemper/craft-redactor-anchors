@@ -18,13 +18,10 @@ class RedactorAnchors extends Plugin
 
         self::$plugin = $this;
 
-        if  (! Craft::$app->request->isConsoleRequest && Craft::$app->request->isCpRequest) {
-            Event::on(Field::class, Field::EVENT_REGISTER_PLUGIN_PATHS, [$this, 'RegisterPluginPath']);
+        if (Craft::$app->getRequest()->getIsCpRequest()) {
+            Event::on(Field::class, Field::EVENT_REGISTER_PLUGIN_PATHS, function(RegisterPluginPathsEvent $event) {
+                $event->paths[] = Craft::getAlias('@heidkaemper/redactoranchors/assets');
+            });
         }
-    }
-
-    public function RegisterPluginPath(RegisterPluginPathsEvent $event)
-    {
-        $event->paths[] = \dirname(__DIR__) . '/src/resources/';
     }
 }
