@@ -1,5 +1,11 @@
 # Changelog for Redactor Anchors
 
+## 1.2.0 - 2022-01-22
+
+### Fixed
+- Anchor was sometimes mistakenly added to a entire paragraph
+- Refactored Code
+
 ## 1.1.0 - 2019-12-05
 
 ### Added
