@@ -1,0 +1,16 @@
+{
+    "name": "craft-redactor-anchors",
+    "description": "Support for anchors in Craft 3 Redactor",
+    "author": "Lars Heidkämper",
+    "license": "MIT",
+    "homepage": "https://github.com/heidkaemper/craft-redactor-anchors",
+    "scripts": {
+        "build": "node ./scripts/build.js",
+        "eslint": "node node_modules/eslint/bin/eslint.js --config ./scripts/.eslintrc.js src/**/*.js"
+    },
+    "devDependencies": {
+        "esbuild": "^0.14.12",
+        "eslint": "^8.7.0"
+    },
+    "dependencies": {}
+}
