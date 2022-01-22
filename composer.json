@@ -1,51 +1,51 @@
 {
-  "name": "heidkaemper/",
-  "description": "Support for anchors in Craft 3 Redactor",
-  "type": "craft-plugin",
-  "keywords": [
-    "craft",
-    "craftcms",
-    "craft-plugin",
-    "redactoranchors",
-    "anchor"
-  ],
-  "support": {
-    "docs": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/README.md",
-    "issues": "https://github.com/heidkaemper/craft-redactor-anchors/issues"
-  },
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Lars Heidkämper",
-      "homepage": "https://github.com/heidkaemper"
-    }
-  ],
-  "require": {
-    "craftcms/cms": "^3.1.30",
-    "craftcms/redactor": "^2.3.3.2"
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "heidkaemper\\redactoranchors\\": "dist/"
-    }
-  },
-  "extra": {
-    "name": "Redactor Anchors",
-    "handle": "redactor-anchors",
-    "developer": "Lars Heidkämper",
-    "developerUrl": "https://github.com/heidkaemper",
-    "schemaVersion": "2.0",
+    "name": "heidkaemper/redactor-anchors",
     "description": "Support for anchors in Craft 3 Redactor",
-    "hasCpSettings": false,
-    "hasCpSection": false,
-    "documentationUrl": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/README.md",
-    "changelogUrl": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/CHANGELOG.md",
-    "class": "heidkaemper\\redactoranchors\\RedactorAnchors"
-  }
+    "type": "craft-plugin",
+    "keywords": [
+        "craft",
+        "craftcms",
+        "craft-plugin",
+        "redactoranchors",
+        "anchor"
+    ],
+    "support": {
+        "docs": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/README.md",
+        "issues": "https://github.com/heidkaemper/craft-redactor-anchors/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lars Heidkämper",
+            "homepage": "https://github.com/heidkaemper"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.1.30",
+        "craftcms/redactor": "^2.3.3.2"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "heidkaemper\\redactoranchors\\": "dist/"
+        }
+    },
+    "extra": {
+        "name": "Redactor Anchors",
+        "handle": "redactor-anchors",
+        "developer": "Lars Heidkämper",
+        "developerUrl": "https://github.com/heidkaemper",
+        "schemaVersion": "2.0",
+        "description": "Support for anchors in Craft 3 Redactor",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "documentationUrl": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/README.md",
+        "changelogUrl": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/CHANGELOG.md",
+        "class": "heidkaemper\\redactoranchors\\RedactorAnchors"
+    }
 }
