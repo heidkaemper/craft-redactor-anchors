@@ -2,19 +2,11 @@
 
 ## 1.3.0 - 2022-01-24
 
-### Fixed
-- Changed package name to support lagacy installations
-
-## 1.2.1 - 2022-01-23
-
-### Fixed
-- Fixed missing package name
+- Refactored Code
+- Anchor was sometimes mistakenly added to a entire paragraph
+- Fix package name to fix 1.2.0 release
 
 ## 1.2.0 - 2022-01-22
-
-### Fixed
-- Anchor was sometimes mistakenly added to a entire paragraph
-- Refactored Code
 
 ## 1.1.0 - 2019-12-05
 
