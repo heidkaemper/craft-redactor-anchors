@@ -1,5 +1,15 @@
 # Changelog for Redactor Anchors
 
+## 1.3.0 - 2022-01-24
+
+### Fixed
+- Changed package name to support lagacy installations
+
+## 1.2.1 - 2022-01-23
+
+### Fixed
+- Fixed missing package name
+
 ## 1.2.0 - 2022-01-22
 
 ### Fixed
