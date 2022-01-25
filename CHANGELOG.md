@@ -5,7 +5,7 @@
 
 ## 1.3.0 - 2022-01-24
 - Refactored Code
-- Anchor was sometimes mistakenly added to a entire paragraph
+- Anchor was sometimes mistakenly added to an entire paragraph
 - Fix package name to fix 1.2.0 release
 
 ## 1.2.0 - 2022-01-22
