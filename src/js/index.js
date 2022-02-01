@@ -9,7 +9,7 @@ import getAnchorFromSelection from './helper/getAnchorFromSelection';
         modals,
         translations,
 
-        init: app => {
+        init: function (app) {
             this.app = app;
             this.opts = app.opts;
             this.lang = app.lang;
@@ -22,7 +22,7 @@ import getAnchorFromSelection from './helper/getAnchorFromSelection';
         },
 
         // add button
-        start: () => {
+        start: function () {
             const $button = this.toolbar.addButton('redactoranchors', {
                 title: this.lang.get('anchor-add'),
                 api: 'plugin.redactoranchors.open',
@@ -32,7 +32,7 @@ import getAnchorFromSelection from './helper/getAnchorFromSelection';
         },
 
         // add modal
-        open: () => {
+        open: function () {
             this.app.api('module.modal.build', {
                 name: 'redactoranchorsModal',
                 title: this.lang.get('anchor'),
@@ -48,7 +48,7 @@ import getAnchorFromSelection from './helper/getAnchorFromSelection';
         // handle modal
         onmodal: {
             redactoranchorsModal: {
-                open: ($modal, $form) => {
+                open: function ($modal, $form) {
                     if (this.selection.isCollapsed()) {
                         this.selection.setAll(this.selection.getElement());
                     }
@@ -56,13 +56,13 @@ import getAnchorFromSelection from './helper/getAnchorFromSelection';
                     this.selection.save();
 
                     $form.setData({
-                        id: getAnchorFromSelection()
+                        id: getAnchorFromSelection(this.selection)
                     });
                 },
-                opened: ($modal, $form) => {
+                opened: function ($modal, $form) {
                     $form.getField('id').focus();
                 },
-                save: ($modal, $form) => {
+                save: function ($modal, $form) {
                     const { id } = $form.getData();
 
                     if (id && ! id.match(/^[a-zA-Z][a-zA-Z0-9-_.]*$/gi)) {
@@ -75,7 +75,7 @@ import getAnchorFromSelection from './helper/getAnchorFromSelection';
 
                     this.selection.restore();
 
-                    setAnchorToSelection(id);
+                    setAnchorToSelection(id, this.app);
                 }
             }
         },

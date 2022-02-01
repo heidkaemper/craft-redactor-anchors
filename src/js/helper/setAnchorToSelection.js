@@ -1,9 +1,9 @@
-export default function setAnchorToSelection(anchor) {
+export default function setAnchorToSelection(anchor, app) {
     if (! anchor) {
-        this.app.api('module.inline.remove', { attr: 'id' });
+        app.api('module.inline.remove', { attr: 'id' });
     
         return;
     }
     
-    this.app.api('module.inline.format', { attr: { id: anchor }, tag: 'span' });
+    app.api('module.inline.format', { attr: { id: anchor }, tag: 'span' });
 }

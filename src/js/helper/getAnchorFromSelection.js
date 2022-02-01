@@ -1,11 +1,11 @@
-export default function getAnchorFromSelection() {
-    const span = $R.dom(this.selection.getInline());
+export default function getAnchorFromSelection(selection) {
+    const span = $R.dom(selection.getInline());
 
     if (span.attr('id')) {
         return span.attr('id');
     }
 
-    return _idFromText(this.selection.isCollapsed() ? span.text() : this.selection.getText());
+    return _idFromText(selection.isCollapsed() ? span.text() : selection.getText());
 }
 
 function _idFromText(str) {

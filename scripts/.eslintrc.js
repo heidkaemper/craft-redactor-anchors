@@ -131,9 +131,6 @@ module.exports = {
         "no-var": [
             "error"
         ],
-        "object-shorthand": [
-            "error"
-        ],
         "prefer-destructuring": [
             "error"
         ],
