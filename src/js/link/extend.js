@@ -1,5 +1,5 @@
 export default function extendLinkPlugin() {
-    if (! $R.modals.link || ! $R.modules.link) {
+    if (! $R.modals.link || ! $R.modules.link || $R.modals.link.search('id="modal-link-anchor"') >= 1) {
         return;
     }
     
