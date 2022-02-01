@@ -1,5 +1,8 @@
 # Changelog for Redactor Anchors
 
+## 1.3.2 - 2022-02-01
+- Fix for multiple Redactor fields
+
 ## 1.3.1 - 2022-01-25
 - Bump for Plugin Store
 
