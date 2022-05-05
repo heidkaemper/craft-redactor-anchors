@@ -1,5 +1,8 @@
 # Changelog for Redactor Anchors
 
+## 1.4.0 - 2022-05-05
+- Support for Craft CMS 4 and Redactor 3
+
 ## 1.3.2 - 2022-02-01
 - Fix for multiple Redactor fields
 
