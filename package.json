@@ -1,6 +1,6 @@
 {
     "name": "craft-redactor-anchors",
-    "description": "Support for anchors in Craft 3 Redactor",
+    "description": "Support for anchors in Craft CMS Redactor",
     "author": "Lars Heidkämper",
     "license": "MIT",
     "homepage": "https://github.com/heidkaemper/craft-redactor-anchors",

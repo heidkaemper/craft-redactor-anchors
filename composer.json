@@ -1,6 +1,6 @@
 {
     "name": "utakka/redactor-anchors",
-    "description": "Support for anchors in Craft 3 Redactor",
+    "description": "Support for anchors in Craft CMS Redactor",
     "type": "craft-plugin",
     "keywords": [
         "craft",
@@ -21,8 +21,8 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.1.30",
-        "craftcms/redactor": "^2.3.3.2"
+        "craftcms/cms": "^3.1|^4.0",
+        "craftcms/redactor": "^2.3|^3.0"
     },
     "repositories": [
         {
@@ -41,7 +41,7 @@
         "developer": "Lars Heidkämper",
         "developerUrl": "https://github.com/heidkaemper",
         "schemaVersion": "2.0",
-        "description": "Support for anchors in Craft 3 Redactor",
+        "description": "Support for anchors in Craft CMS Redactor",
         "hasCpSettings": false,
         "hasCpSection": false,
         "documentationUrl": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/README.md",
