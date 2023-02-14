@@ -45,14 +45,17 @@ export default function extendLinkPlugin() {
         const formData = $form.getData();
 
         // split url by anchors
-        const pcs = formData.url.match(/^(.*?)(#(?!entry\:[0-9]+).*?)?(#entry\:[0-9]+.*)?$/i);
+        const matches = formData.url.match(/^(?<url>.*?)(?<anchor>#(?!(entry|asset)\:[0-9]+).*?)(?<internal>#(entry|asset)\:[0-9]+.*)?$/i);
+
+        if (! matches) {
+            return;
+        }
 
         // update form
-        if (pcs && pcs.length > 2 && pcs[2] !== undefined) {
-            formData.url = pcs[1] + (pcs[3] !== undefined ? pcs[3] : '');
-            formData.anchor = pcs[2].replace('#', '');
-            $form.setData(formData);
-        }
+        formData.url = matches.groups.url + (matches.groups.internal ?? '');
+        formData.anchor = matches.groups.anchor.replace('#', '');
+
+        $form.setData(formData);
     };
 
     // new validation function
