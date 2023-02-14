@@ -6,4 +6,5 @@ esbuild.build({
     platform: 'browser',
     minify: true,
     bundle: true,
+    watch: process.argv.includes('--watch'),
 });
