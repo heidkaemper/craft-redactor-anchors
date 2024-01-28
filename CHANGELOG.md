@@ -1,5 +1,8 @@
 # Changelog for Redactor Anchors
 
+## 1.4.2 - 2024-01-28
+- Packages & tooling updates
+
 ## 1.4.1 - 2023-02-14
 - Fixes compatibility with asset links
 
@@ -16,8 +19,6 @@
 - Refactored Code
 - Anchor was sometimes mistakenly added to an entire paragraph
 - Fix package name to fix 1.2.0 release
-
-## 1.2.0 - 2022-01-22
 
 ## 1.1.0 - 2019-12-05
 - Anchor name from selected text
