@@ -1,17 +1,17 @@
 {
-    "name": "craft-redactor-anchors",
-    "description": "Support for anchors in Craft CMS Redactor",
-    "author": "Lars Heidkämper",
-    "license": "MIT",
-    "homepage": "https://github.com/heidkaemper/craft-redactor-anchors",
+    "private": true,
+    "name": "redactor-anchors",
     "scripts": {
-        "build": "node ./scripts/build.js",
-        "watch": "node ./scripts/build.js --watch",
-        "eslint": "node node_modules/eslint/bin/eslint.js --config ./scripts/.eslintrc.js src/**/*.js"
+        "dev": "npm run watch",
+        "watch": "esbuild src/js/index.js --bundle --minify --outfile=dist/assets/redactoranchors.js --watch",
+        "prod": "npm run build",
+        "build": "esbuild src/js/index.js --bundle --minify --outfile=dist/assets/redactoranchors.js",
+        "lint": "npx eslint src/**/*.js",
+        "lint:fix": "npx eslint src/**/*.js --fix"
     },
+    "dependencies": {},
     "devDependencies": {
-        "esbuild": "^0.14.12",
-        "eslint": "^8.7.0"
-    },
-    "dependencies": {}
+        "esbuild": "^0.20.0",
+        "eslint": "^8.56.0"
+    }
 }
