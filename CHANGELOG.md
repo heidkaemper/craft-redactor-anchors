@@ -1,5 +1,8 @@
 # Changelog for Redactor Anchors
 
+## 1.4.1 - 2023-02-14
+- Fixes compatibility with asset links
+
 ## 1.4.0 - 2022-05-05
 - Support for Craft CMS 4 and Redactor 3
 

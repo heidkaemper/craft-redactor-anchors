@@ -1,51 +1,54 @@
 {
     "name": "utakka/redactor-anchors",
-    "description": "Support for anchors in Craft CMS Redactor",
+    "license": "MIT",
     "type": "craft-plugin",
+    "description": "Support for anchors in Craft CMS Redactor",
     "keywords": [
         "craft",
         "craftcms",
         "craft-plugin",
         "redactoranchors",
+        "redactor",
         "anchor"
     ],
-    "support": {
-        "docs": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/README.md",
-        "issues": "https://github.com/heidkaemper/craft-redactor-anchors/issues"
-    },
-    "license": "MIT",
     "authors": [
         {
             "name": "Lars Heidkämper",
             "homepage": "https://github.com/heidkaemper"
         }
     ],
+    "support": {
+        "docs": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/README.md",
+        "issues": "https://github.com/heidkaemper/craft-redactor-anchors/issues"
+    },
     "require": {
         "craftcms/cms": "^3.1|^4.0",
         "craftcms/redactor": "^2.3|^3.0"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.39"
+    },
     "autoload": {
         "psr-4": {
             "heidkaemper\\redactoranchors\\": "dist/"
         }
     },
+    "scripts": {
+        "phpcs": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes --dry-run --verbose --diff",
+        "phpcs:fix": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --allow-risky=yes"
+    },
     "extra": {
         "name": "Redactor Anchors",
         "handle": "redactor-anchors",
-        "developer": "Lars Heidkämper",
-        "developerUrl": "https://github.com/heidkaemper",
-        "schemaVersion": "2.0",
-        "description": "Support for anchors in Craft CMS Redactor",
-        "hasCpSettings": false,
-        "hasCpSection": false,
-        "documentationUrl": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/README.md",
-        "changelogUrl": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/CHANGELOG.md",
-        "class": "heidkaemper\\redactoranchors\\RedactorAnchors"
-    }
+        "class": "heidkaemper\\redactoranchors\\RedactorAnchors",
+        "documentationUrl": "https://github.com/heidkaemper/craft-redactor-anchors/blob/master/README.md"
+    },
+    "config": {
+        "allow-plugins": {
+            "craftcms/plugin-installer": true,
+            "yiisoft/yii2-composer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
