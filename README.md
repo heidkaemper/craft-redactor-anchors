@@ -30,5 +30,4 @@ There is a [redactor-config-sample.json](./redactor-config-sample.json), too.
 <p>
 <a href="https://packagist.org/packages/utakka/redactor-anchors"><img src="https://img.shields.io/packagist/v/utakka/redactor-anchors?label=Version" alt="Version"></a>
 <a href="https://packagist.org/packages/utakka/redactor-anchors/stats"><img src="https://img.shields.io/packagist/dt/utakka/redactor-anchors?label=Downloads" alt="Total Downloads"></a>
-<a href="https://github.styleci.io/repos/191954611"><img src="https://github.styleci.io/repos/191954611/shield?style=flat" alt="Coding Style"></a>
 </p>
