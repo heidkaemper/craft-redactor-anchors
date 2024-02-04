@@ -10,6 +10,7 @@ use yii\base\Event;
 
 class RedactorAnchors extends Plugin
 {
+    public string $schemaVersion = '2.0';
     public static $plugin;
 
     public function init()
