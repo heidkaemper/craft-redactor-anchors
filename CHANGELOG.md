@@ -1,5 +1,8 @@
 # Changelog for Redactor Anchors
 
+## 1.4.3 - 2024-02-05
+- Fix compatibility with existing Craft 3 installations
+
 ## 1.4.2 - 2024-01-28
 - Packages & tooling updates
 
