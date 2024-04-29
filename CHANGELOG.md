@@ -1,5 +1,8 @@
 # Changelog for Redactor Anchors
 
+## 1.5.0 - 2024-04-29
+- Support for Craft CMS 5 and Redactor 4
+
 ## 1.4.3 - 2024-02-05
 - Fix compatibility with existing Craft 3 installations
 
