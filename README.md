@@ -2,7 +2,7 @@
 
 ![Image of Craft Redactor Anchors](./preview.jpg)
 
-Add anchor functionality for Reactor in Craft CMS
+Add anchor functionality for Redactor in Craft CMS
 
 ## Installation
 
